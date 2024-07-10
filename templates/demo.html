@@ -157,7 +157,7 @@
             event.preventDefault();
             $.ajax({
               type: 'POST',
-              url: '/',
+              url: '{{ url_for("demo") }}',
               data: $('form').serialize(),
               success: function() {
                 $('user_input').val('');

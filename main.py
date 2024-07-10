@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 from flask_bootstrap import Bootstrap5
 from showmaker_demo import ShowMaker
 
@@ -10,6 +10,10 @@ Bootstrap5(app)
 
 
 @app.route('/', methods=['GET','POST'])
+def home():
+    return f"<a href={url_for('demo')}>play<a/>"
+
+@app.route('/demo', methods=['GET','POST'])
 def demo():
     if request.method == "POST":
         enter = request.form.get('user_input')
