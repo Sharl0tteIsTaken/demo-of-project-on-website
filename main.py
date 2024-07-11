@@ -4,8 +4,6 @@ from showmaker_demo import ShowMaker
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secret-key-goes-here'
-# app.config['SECRET_KEY'] = os.environ.get("APP_SECRET_KEY")
 Bootstrap5(app)
 
 
